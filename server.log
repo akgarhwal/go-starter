@@ -1,7 +1,0 @@
-[36mINFO[0m[2021-09-12T22:09:14+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 143.595µs               
-[36mINFO[0m[2021-09-12T22:09:29+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 88.818µs                
-[36mINFO[0m[2021-09-12T22:09:35+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 2.057µs                 
-[36mINFO[0m[2021-09-12T22:16:19+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 5.79µs                  
-[36mINFO[0m[2021-09-12T22:16:25+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 134.929µs               
-[36mINFO[0m[2021-09-12T22:16:28+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 24.096µs                
-[36mINFO[0m[2021-09-12T22:16:34+05:30]/Users/aabhinesh/zynga/go-starter/internal/middleware/logging.go:14 go-starter/internal/middleware.LoggingMiddleware.func1() request completed in 38.223µs                
