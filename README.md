@@ -1,25 +1,27 @@
 # go-starter
 
-Golang base project using [gorilla/mux](https://github.com/gorilla/mux) request router, and inspired from the Clean code Architecture
+Golang base project using [gorilla/mux](https://github.com/gorilla/mux) request router and inspired from the Clean code Architecture
 
-<br><br><br> 
+<br/>
 ### Folder Structure
 
 here how golang-started manage directory:
 ```
 |-- config
 |-- infra
+|   |-- database
 |-- internal
 |   |-- middleware
 |   |-- server
-    |-- response
+|   |-- response
+|   |-- logger
 |-- src
+|   |-- Model
+|   |-- Dto
+|   |-- Handler
+|   |-- Service
+|   |-- Repository
 ```
-
-<!-- |   |-- utils
-|       |-- auth
-|       |-- encryption
-|   |-- web -->
 
 all global setting will place in internal folder.
 all module will place in src.
