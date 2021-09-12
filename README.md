@@ -2,8 +2,8 @@
 
 Golang base project using [gorilla/mux](https://github.com/gorilla/mux) request router and inspired from the Clean code Architecture
 
-<br/>
-### Folder Structure
+
+## Folder Structure
 
 here how golang-started manage directory:
 ```
