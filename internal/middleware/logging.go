@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"go-starter/pkg/logger"
+	"go-starter/internal/logger"
 	"net/http"
 	"time"
 )

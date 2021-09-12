@@ -1,12 +1,12 @@
 package repositories
 
 import (
-	"go-starter/pkg/db"
-	"go-starter/src/message/entities"
+	"go-starter/infra/db"
+	"go-starter/src/message/models"
 )
 
 type MessageRepositoryInterface interface {
-	Find(string) entities.Message
+	Find(string) models.Message
 }
 
 type messageRepository struct {
@@ -19,8 +19,8 @@ func NewMessageRepostiory(DB db.MongoDB) MessageRepositoryInterface {
 	}
 }
 
-func (p *messageRepository) Find(name string) entities.Message {
-	var message entities.Message
+func (p *messageRepository) Find(name string) models.Message {
+	var message models.Message
 	// fetch message from db
 	// message = p.DB.ConnectDatabase().Collection(message.CollectionName()).FindOne(nil, bson.M{})
 

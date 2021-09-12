@@ -2,12 +2,12 @@ package services
 
 import (
 	"go-starter/src/message/dto"
-	"go-starter/src/message/entities"
+	"go-starter/src/message/models"
 	"go-starter/src/message/repositories"
 )
 
 type MessageService interface {
-	GetMessage(dto.MessageRequestBody) entities.Message
+	GetMessage(dto.MessageRequestBody) models.Message
 }
 
 type messageService struct {
@@ -20,6 +20,6 @@ func NewMessageService(messageRepository repositories.MessageRepositoryInterface
 	}
 }
 
-func (repo *messageService) GetMessage(request dto.MessageRequestBody) entities.Message {
+func (repo *messageService) GetMessage(request dto.MessageRequestBody) models.Message {
 	return repo.MessageRepository.Find(request.Name)
 }

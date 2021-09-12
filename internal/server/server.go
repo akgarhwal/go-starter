@@ -1,7 +1,8 @@
 package server
 
 import (
-	"go-starter/pkg/db"
+	"go-starter/config"
+	"go-starter/infra/db"
 	"log"
 	"net/http"
 	"sync"
@@ -39,7 +40,7 @@ func (s *Server) SetLogger(logger *logrus.Logger) {
 
 func (s *Server) StartHttpServer() error {
 
-	appPort := "8080" //config.Get().AppPort
+	appPort := config.Get().AppPort
 	srv := &http.Server{
 		Handler:      s.Router,
 		Addr:         ":" + appPort,
