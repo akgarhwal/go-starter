@@ -33,7 +33,7 @@ func (handler *exampleHandlers) GetExample(rw http.ResponseWriter, r *http.Reque
 	}
 
 	example := handler.ExampleService.GetExample(exampleRequest)
-	exampleResponse := dto.ExampleResponse(example)
+	exampleResponse := dto.ParseFromEntity(example)
 
 	response.JsonResponse(rw, 200, "success", exampleResponse)
 }
