@@ -8,12 +8,10 @@ import (
 
 func main() {
 
-	log := logger.Log
 	database := db.NewMongoClient()
 
 	server := server.NewServer()
 	server.SetDatabase(database)
-	server.SetLogger(log)
 
-	log.Fatal(server.StartHttpServer())
+	logger.Log.Fatal(server.StartHttpServer())
 }

@@ -3,13 +3,12 @@ package server
 import (
 	"go-starter/config"
 	"go-starter/infra/db"
-	"log"
+	"go-starter/internal/logger"
 	"net/http"
 	"sync"
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/sirupsen/logrus"
 )
 
 var once sync.Once
@@ -18,7 +17,6 @@ var server Server
 type Server struct {
 	Router   *mux.Router
 	Database db.MongoDB
-	Log      *logrus.Logger
 }
 
 func NewServer() Server {
@@ -34,10 +32,6 @@ func (s *Server) SetDatabase(database db.MongoDB) {
 	s.Database = database
 }
 
-func (s *Server) SetLogger(logger *logrus.Logger) {
-	s.Log = logger
-}
-
 func (s *Server) StartHttpServer() error {
 
 	appPort := config.Get().AppPort
@@ -48,7 +42,7 @@ func (s *Server) StartHttpServer() error {
 		ReadTimeout:  15 * time.Second,
 	}
 
-	log.Print("Server running on port: ", appPort)
+	logger.Log.Info("Server running on port: ", appPort)
 
 	// TODO update with graceful shutdown
 	err := srv.ListenAndServe()

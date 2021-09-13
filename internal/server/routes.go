@@ -3,9 +3,9 @@ package server
 import (
 	"fmt"
 	"go-starter/internal/middleware"
-	"go-starter/src/message/handlers"
-	"go-starter/src/message/repositories"
-	"go-starter/src/message/services"
+	"go-starter/src/example/handlers"
+	"go-starter/src/example/repositories"
+	"go-starter/src/example/services"
 	"net/http"
 )
 
@@ -19,9 +19,9 @@ func (s *Server) routes() {
 	s.Router.Use(middleware.LoggingMiddleware)
 
 	// define extra routes
-	messageRepository := repositories.NewMessageRepostiory(s.Database)
-	messageService := services.NewMessageService(messageRepository)
-	messageHandlers := handlers.NewHttpHandler(messageService)
-	// setup message routes
-	s.Router.HandleFunc("/message", messageHandlers.GetMessage)
+	exampleRepository := repositories.NewExampleRepostiory(s.Database)
+	exampleService := services.NewMExampleService(exampleRepository)
+	exampleHandlers := handlers.NewHttpHandler(exampleService)
+	// setup example routes
+	s.Router.HandleFunc("/example", exampleHandlers.GetExample)
 }

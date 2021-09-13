@@ -1,5 +1,5 @@
 package dto
 
-type MessageRequestBody struct {
+type ExampleRequestBody struct {
 	Name string `json:"name"`
 }

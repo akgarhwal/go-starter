@@ -25,7 +25,7 @@ func newLogger() *logrus.Logger {
 	if config.Get().LogPath != "" {
 		err := os.Mkdir(config.Get().LogPath, 0755)
 		if err != nil {
-			log.Println("Failed to create log path. error: ", err)
+			log.Println("[ERROR] failed to create log path. error: ", err)
 		}
 		log.Println("Success to create log path")
 	}
@@ -34,7 +34,7 @@ func newLogger() *logrus.Logger {
 	logFilename := "server.log"
 	logfile, err := os.OpenFile(logFilename, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
 	if err != nil {
-		log.Print("[ERROR] not able to open/create log file. err: ", err)
+		log.Println("[ERROR] not able to open/create log file. err: ", err)
 	}
 	Log.SetOutput(logfile)
 

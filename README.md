@@ -36,10 +36,10 @@ If you using redis in your project, create a cached folder then create a file ca
 # Internal
 Internal with their folders are using for the whole apps that will be needed to be a global function that will call in other modules. example:
 
-we have a message modules with their controller, repo, service, in the service we need a jwt for verification the jwt token. the jwt token function will be a callable function on other moduless, hence the jwt must be a global function
+we have a example modules with their controller, repo, service, in the service we need a jwt for verification the jwt token. the jwt token function will be a callable function on other moduless, hence the jwt must be a global function
 
 # src
-This boilerplate based on modules. eg: messages modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is controller -> service -> repository.
+This boilerplate based on modules. eg: example modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is controller -> service -> repository.
 
 ## models
 models is a struct to store any objects from database, example you have a message in your tables. then you must create your messages.go in the models folder, it's use to decode the data from database query and store it as a object
