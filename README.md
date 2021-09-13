@@ -1,6 +1,6 @@
 # go-starter
 
-Golang base project using [gorilla/mux](https://github.com/gorilla/mux) request router and inspired from the Clean code Architecture
+Go base project using [gorilla/mux](https://github.com/gorilla/mux) request router and inspired from the Clean code Architecture
 
 
 ## Folder Structure
