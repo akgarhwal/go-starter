@@ -62,3 +62,7 @@ note that if you have relations based on the modules example you have a product 
 
 ## Repository
 Repository contains all of database query
+
+
+## License
+This package is licensed under MIT license. See LICENSE for details.
