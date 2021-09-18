@@ -14,7 +14,7 @@ type exampleService struct {
 	ExampleRepository repositories.ExampleRepositoryInterface
 }
 
-func NewMExampleService(exampleRepository repositories.ExampleRepositoryInterface) ExampleService {
+func NewExampleService(exampleRepository repositories.ExampleRepositoryInterface) ExampleService {
 	return &exampleService{
 		ExampleRepository: exampleRepository,
 	}
