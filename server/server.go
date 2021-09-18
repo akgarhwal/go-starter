@@ -2,8 +2,8 @@ package server
 
 import (
 	"go-starter/config"
-	"go-starter/infra/db"
-	"go-starter/internal/logger"
+	"go-starter/library/logger"
+	"go-starter/storage/db"
 	"net/http"
 	"sync"
 	"time"

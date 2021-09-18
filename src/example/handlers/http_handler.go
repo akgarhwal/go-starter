@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"go-starter/internal/response"
+	"go-starter/library/response"
 	"go-starter/src/example/dto"
 	"go-starter/src/example/services"
 	"net/http"

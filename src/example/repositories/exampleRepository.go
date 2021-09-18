@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"go-starter/infra/db"
 	"go-starter/src/example/models"
+	"go-starter/storage/db"
 )
 
 type ExampleRepositoryInterface interface {

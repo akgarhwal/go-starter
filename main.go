@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-starter/infra/db"
-	"go-starter/internal/logger"
-	"go-starter/internal/server"
+	"go-starter/library/logger"
+	"go-starter/server"
+	"go-starter/storage/db"
 )
 
 func main() {

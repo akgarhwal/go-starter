@@ -8,35 +8,34 @@ Go base project using [gorilla/mux](https://github.com/gorilla/mux) request rout
 here how golang-started manage directory:
 ```
 |-- config
-|-- infra
-|   |-- database
-|-- internal
+|-- library
 |   |-- middleware
-|   |-- server
 |   |-- response
 |   |-- logger
+|-- server
 |-- src
 |   |-- Model
 |   |-- Dto
 |   |-- Handler
 |   |-- Service
 |   |-- Repository
+|-- storage
+|   |-- database
 ```
 
-all global setting will place in internal folder.
+all global setting will place in library folder.
 all module will place in src.
 
 # Config
 Config modules for the app
 
-# Infra
-infra store the infrastructure layer, such as database, database stored in infrastructures/db folder. If you use mysql, then just create a file called mysql.go and you must define your mysql modules here (it's a dependency).
-If you using redis in your project, create a cached folder then create a file called redis.go, and make your modules again. all examples was attached in this repo
-
-# Internal
-Internal with their folders are using for the whole apps that will be needed to be a global function that will call in other modules. example:
+# library
+library with their folders are using for the whole apps that will be needed to be a global function that will call in other modules. example:
 
 we have a example modules with their controller, repo, service, in the service we need a jwt for verification the jwt token. the jwt token function will be a callable function on other moduless, hence the jwt must be a global function
+
+# Server
+Server will have server config and method releated to server like start and shutdown server and routes 
 
 # src
 This boilerplate based on modules. eg: example modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is controller -> service -> repository.
@@ -62,6 +61,10 @@ note that if you have relations based on the modules example you have a product 
 
 ## Repository
 Repository contains all of database query
+
+# Storage
+Storage store the storage layer, such as database, database stored in storage/db folder. If you use mysql, then just create a file called mysql.go and you must define your mysql modules here (it's a dependency).
+If you using redis in your project, create a cached folder then create a file called redis.go, and make your modules again. all examples was attached in this repo
 
 
 ## License

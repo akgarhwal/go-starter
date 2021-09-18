@@ -2,7 +2,7 @@ package server
 
 import (
 	"fmt"
-	"go-starter/internal/middleware"
+	"go-starter/library/middleware"
 	"go-starter/src/example/handlers"
 	"go-starter/src/example/repositories"
 	"go-starter/src/example/services"
