@@ -20,7 +20,7 @@ func (s *Server) routes() {
 
 	// define extra routes
 	exampleRepository := repositories.NewExampleRepostiory(s.Database)
-	exampleService := services.NewMExampleService(exampleRepository)
+	exampleService := services.NewExampleService(exampleRepository)
 	exampleHandlers := handlers.NewHttpHandler(exampleService)
 	// setup example routes
 	s.Router.HandleFunc("/example", exampleHandlers.GetExample)
