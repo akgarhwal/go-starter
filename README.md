@@ -38,7 +38,7 @@ we have a example modules with their controller, repo, service, in the service w
 Server will have server config and method releated to server like start and shutdown server and routes 
 
 # src
-This boilerplate based on modules. eg: example modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is controller -> service -> repository.
+This boilerplate based on modules. eg: example modules, user modules, product modules etc. and the modules have their structure based on clean architecture. controllers, models, repositories, services. the flow is handler -> service -> repository.
 
 ## models
 models is a struct to store any objects from database, example you have a message in your tables. then you must create your messages.go in the models folder, it's use to decode the data from database query and store it as a object
